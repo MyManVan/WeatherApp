@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0
+}
+
+body {
+  overflow-x: none;
+}
+
+section#main {
+  height: 100vh;
+  background-image: linear-gradient(cornflowerblue, springgreen);
+  font-family: sans-serif;
+  color: white;
+}
+
+.location, .temperature {
+  height: 30vh
+  width: 50%;
+}
+
+.temperature-degree {
+  display: inline;
+}
+
+.degree {
+  cursor: pointer;
+}
+
+.degree span {
+  display: inline;
+  font-size: 30px;
+}
+
+.degree h2 {
+  font-size: 40px;
+}
+
+.icon {
+  margin: auto 20px 20px 20px;
+}
+
+.middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
