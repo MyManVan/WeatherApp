@@ -6,6 +6,7 @@ window.addEventListener('load', ()=> {
   let locationTimezone = document.querySelector('.location-timezone');
   let temperatureSection = document.querySelector('.temperature');
   const temperatureSpan = document.querySelector('.temperature span')
+  let locationModal = document.querySelector('.location-modal')
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -16,7 +17,7 @@ window.addEventListener('load', ()=> {
 
       const api = `${proxy}https://api.darksky.net/forecast/74841ed3888020bd394e9a18e82694de/${lat},${long}`;
 
-
+      locationModal.classList.add('hide');
 
       fetch(api)
         .then(response => {
@@ -46,7 +47,7 @@ window.addEventListener('load', ()=> {
             });
         });
     });
-  }
+  };
 
 
   function setIcons(icon, iconID) {
