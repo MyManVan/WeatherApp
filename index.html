@@ -4,23 +4,41 @@
     <link rel="stylesheet" href="all.css">
     <title>Weather App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://i.ibb.co/XC8rxk8/sunish.png" type="image/x-icon" />
   </head>
   <body>
   <section id="main">
   <div class="middle">
-<canvas class="icon" width="128" height="128"></canvas>
-  <div class="location">
-    <h1 class="location-timezone">Timezone</h1>
+    <canvas class="icon" width="128" height="128"></canvas>
+
+
+  <div>
+
+    <h1 class="date-summary">Date</h1>
 
   </div>
+
   <div class="temperature">
+
       <div class="degree">
         <h2 class="temperature-degree">0</h2>
         <span>F</span>
       </div>
+
     <p class="temperature-description">loading.</p>
+
+    <ul id="preview">
+      <li><p>Date1</p><p>Temperature1</p><canvas class="icon1" width="50" height="50"></canvas></li>
+      <li><p>Date2</p><p>Temperature2</p><canvas class="icon2" width="50" height="50"></canvas></li>
+      <li><p>Date3</p><p>Temperature3</p><canvas class="icon3" width="50" height="50"></canvas></li>
+      <li><p>Date4</p><p>Temperature4</p><canvas class="icon4" width="50" height="50"></canvas></li>
+      <li><p>Date5</p><p>Temperature5</p><canvas class="icon5" width="50" height="50"></canvas></li>
+      <li><p>Date6</p><p>Temperature6</p><canvas class="icon6" width="50" height="50"></canvas></li>
+      <li><p>Date7</p><p>Temperature7</p><canvas class="icon7" width="50" height="50"></canvas></li>
+    </ul>
   </div>
   </div>
+
   </section>
   <div class="location-modal">
     <h1>Error</h1>
