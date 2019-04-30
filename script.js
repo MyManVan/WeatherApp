@@ -12,7 +12,7 @@ window.addEventListener('load', ()=> {
   let previewList = preview.getElementsByTagName("li");
   let weekList = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
   let currentDay = new Date().toLocaleDateString("en-US", {weekday: 'long'});
-
+  const temperatureSpanPreview = document.querySelector('.ul li span');
 
 
   var options = { weekday: 'long', month: 'long', day: 'numeric' };
@@ -46,13 +46,15 @@ window.addEventListener('load', ()=> {
           //Set icon
           setIcons(icon, document.querySelector('.icon'));
           //add event listener for degree
-          /*
+/*
             degreeDiv.addEventListener('click', () =>{
               if (temperatureSpan.textContent === "F") {
                 temperatureSpan.textContent = "C";
+                temperatureSpanPreview.textContent = "C";
                 temperatureDegree.textContent = Math.floor(celsius);
               } else {
                 temperatureSpan.textContent = "F";
+                temperatureSpanPreview.textContent = "F";
                 temperatureDegree.textContent = Math.floor(temperature);
               }
             });*/
