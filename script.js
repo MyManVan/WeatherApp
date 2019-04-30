@@ -60,13 +60,14 @@ window.addEventListener('load', ()=> {
             for (i = 0; i < previewList.length; i++) {
               for (o = 0; o < weekList.length; o++) {
                 if (currentDay == weekList[o]) {
-                    if (o + 1 + i > 6) {
+                  if (o + 1 + i > 6) {
                     previewList[i].childNodes[0].textContent = weekList[o + 1 + i - 7];
                     previewList[i].childNodes[1].textContent = Math.floor((data.daily.data[i].temperatureMax + data.daily.data[i].temperatureMin)/2);
-                    
+                    setIcons(data.daily.data[i].icon, document.querySelector('.icon' + (i + 1)));
                   } else {
                     previewList[i].childNodes[0].textContent = weekList[o + 1 + i];
                     previewList[i].childNodes[1].textContent = Math.floor((data.daily.data[i].temperatureMax + data.daily.data[i].temperatureMin)/2);
+                    setIcons(data.daily.data[i].icon, document.querySelector('.icon' + (i + 1)));
                   };
                 };
               };
