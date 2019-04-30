@@ -1,4 +1,5 @@
 window.addEventListener('load', ()=> {
+
   let long;
   let lat;
   let temperatureDescription = document.querySelector('.temperature-description');
@@ -13,6 +14,8 @@ window.addEventListener('load', ()=> {
   let weekList = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
   let currentDay = new Date().toLocaleDateString("en-US", {weekday: 'long'});
   const temperatureSpanPreview = document.querySelector('.ul li span');
+  let overlay = document.getElementById("overlay");
+
 
 
   var options = { weekday: 'long', month: 'long', day: 'numeric' };
@@ -35,6 +38,7 @@ window.addEventListener('load', ()=> {
 
         })
         .then(data=>{
+
           console.log(data);
           const { temperature, summary, icon } = data.currently;
           //Set DOM elements from api
@@ -74,6 +78,7 @@ window.addEventListener('load', ()=> {
                 };
               };
             };
+            overlay.style.display = "none";
         });
     });
   };
@@ -85,4 +90,7 @@ window.addEventListener('load', ()=> {
       skycons.play();
       return skycons.set(iconID, Skycons[currentIcon]);
   }
+
+
+
 });

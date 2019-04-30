@@ -52,31 +52,6 @@ section#main {
   text-align: center;
 }
 
-.location-modal {
-  width: 90%;
-  z-index: 5;
-  background-color: white;
-  color: black;
-  display: block;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  margin: auto;
-  padding: 100px 0px 100px 0px;
-  border: 4px inset springgreen;
-  border-radius: 15px;
-}
-
-.location-modal h1 {
-  text-align: center;
-  font-size: 50px;
-}
-
-.location-modal p {
-  text-align: center;
-  font-size: 20px;
-}
 
 .hide {
   display: none;
@@ -126,4 +101,65 @@ section#main {
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(cornflowerblue, springgreen);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 40;
+}
+#overlay .sk-cube-grid {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#overlay .sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-image: linear-gradient(cornflowerblue, springgreen);
+  float: left;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+#overlay .sk-cube-grid .sk-cube1 {
+  animation-delay: 0.2s;
+}
+#overlay .sk-cube-grid .sk-cube2 {
+  animation-delay: 0.3s;
+}
+#overlay .sk-cube-grid .sk-cube3 {
+  animation-delay: 0.4s;
+}
+#overlay .sk-cube-grid .sk-cube4 {
+  animation-delay: 0.1s;
+}
+#overlay .sk-cube-grid .sk-cube5 {
+  animation-delay: 0.2s;
+}
+#overlay .sk-cube-grid .sk-cube6 {
+  animation-delay: 0.3s;
+}
+#overlay .sk-cube-grid .sk-cube7 {
+  animation-delay: 0s;
+}
+#overlay .sk-cube-grid .sk-cube8 {
+  animation-delay: 0.1s;
+}
+#overlay .sk-cube-grid .sk-cube9 {
+  animation-delay: 0.2s;
+}
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    transform: scale3D(0, 0, 1);
+  }
 }
