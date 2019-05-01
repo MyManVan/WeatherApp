@@ -53,9 +53,6 @@ section#main {
 }
 
 
-.hide {
-  display: none;
-}
 
 #preview {
   display: block;
@@ -68,7 +65,7 @@ section#main {
   width: 300px;
   margin: 5px;
   background-color: transparent;
-  border-bottom: solid white 1px;
+  border-bottom: solid #ffffff50 1px;
   position: relative;
 }
 

@@ -7,7 +7,6 @@ window.addEventListener('load', ()=> {
   let dateSummary = document.querySelector('.date-summary');
   let temperatureSection = document.querySelector('.temperature');
   const temperatureSpan = document.querySelector('.temperature span');
-  let locationModal = document.querySelector('.location-modal');
   let degreeDiv = document.querySelector('.degree');
   let preview = document.getElementById('preview');
   let previewList = preview.getElementsByTagName("li");
@@ -30,7 +29,6 @@ window.addEventListener('load', ()=> {
 
       const api = `${proxy}https://api.darksky.net/forecast/74841ed3888020bd394e9a18e82694de/${lat},${long}`;
 
-      locationModal.classList.add('hide');
 
       fetch(api)
         .then(response => {
@@ -50,7 +48,7 @@ window.addEventListener('load', ()=> {
           //Set icon
           setIcons(icon, document.querySelector('.icon'));
           //add event listener for degree
-/*
+          /*
             degreeDiv.addEventListener('click', () =>{
               if (temperatureSpan.textContent === "F") {
                 temperatureSpan.textContent = "C";
